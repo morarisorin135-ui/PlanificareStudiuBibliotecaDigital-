@@ -1,0 +1,23 @@
+@startuml
+
+start
+
+:Accesezi biblioteca;
+
+if (Ai card de membru?) then (yes)
+  :Prezinți cardul;
+  if (Cartea este disponibilă?) then (yes)
+    :Bibliotecarul înregistrează împrumutul;
+    :Primești cartea;
+  else (no)
+    :Cartea nu este disponibilă;
+    :Poți face rezervare;
+  endif
+else (no)
+  :Nu poți împrumuta cartea;
+  :Trebuie să îți faci card;
+endif
+
+stop
+
+@enduml
