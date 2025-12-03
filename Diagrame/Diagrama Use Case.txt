@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+actor Utilizator as u
+actor Bibliotecar as b
+
+package Biblioteca {
+  usecase "Împrumută carte" as UC1
+  usecase "Returnează carte" as UC2
+  usecase "Caută carte" as UC3
+  usecase "Reînnoiește împrumut" as UC4
+  usecase "Gestionează inventar" as UC5
+}
+
+' Legături pentru utilizator
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC4
+
+' Legături pentru bibliotecar
+b --> UC1
+b --> UC2
+b --> UC5
+
+@enduml
